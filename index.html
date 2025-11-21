@@ -51,8 +51,8 @@
             <p>Especialistas en bordados personalizados, vinilo textil e impresión digital. Calidad y experiencia al servicio de empresas, peñas, fallas y clubs.</p>
             
             <div class="hero-buttons">
-                <a href="servicios.html" class="btn-primary">Ver servicios <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="contacto.html" class="btn-secondary"><i class="fa-solid fa-phone"></i> Solicitar presupuesto</a>
+                <a href="#servicios" class="btn-primary">Ver servicios <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contacto" class="btn-secondary"><i class="fa-solid fa-phone"></i> Solicitar presupuesto</a>
             </div>
         </div>
     </section>
@@ -442,7 +442,7 @@
                 </div>
             </div>
             
-    
+            
             <!-- FORMULARIO -->
             <div class="contact-form-card">
                 <h3>Solicitar Presupuesto</h3>
@@ -450,16 +450,16 @@
                 <form id="contact-form" enctype="multipart/form-data">
 
                     <label>Nombre completo *</label>
-                    <input type="text" name="from_name" required placeholder="Tu nombre">
+                    <input type="text" name="from_name" placeholder="Tu nombre">
 
                     <label>Email *</label>
-                    <input type="email" name="reply_to" required placeholder="tu@email.com">
+                    <input type="email" name="from_email" placeholder="tu@email.com">
 
                     <label>Teléfono *</label>
                     <input type="tel" name="phone" required placeholder="XXX XXX XXX">
 
                     <label>Tipo de trabajo *</label>
-                    <select name="service_type" required>
+                    <select name="servicio" required>
                         <option value="">Selecciona un servicio</option>
                         <option value="Bordados Personalizados">Bordados Personalizados</option>
                         <option value="Vinilo Textil">Vinilo Textil</option>
@@ -469,8 +469,10 @@
                         <option value="Otros">Otros</option>
                     </select>
 
+                    <!-- ============================= 
                     <label>Subir logo/diseño (opcional)</label>
                     <input type="file" name="file">
+                    -->
 
                     <label>Mensaje *</label>
                     <textarea name="message" required placeholder="Cuéntanos los detalles de tu proyecto..."></textarea>
@@ -551,6 +553,7 @@
     <!-- JS -->
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/lightbox.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/js/enviar-mails.js"></script>
 </body>
 </html>
