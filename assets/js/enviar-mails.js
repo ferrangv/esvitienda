@@ -17,7 +17,13 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         "template_yty62mn",
         this
     ).then(() => {
-        alert("Tu solicitud se envió correctamente. ¡Gracias por contactarnos!");
+        // Mostrar popup
+        document.getElementById("success-popup").classList.add("show");
+
+        // Ocultarlo automáticamente después de 3 segundos
+        setTimeout(() => {
+            document.getElementById("success-popup").classList.remove("show");
+        }, 2000);
         btn.innerText = "Enviar Solicitud";
         this.reset();
     }, (error) => {

@@ -914,3 +914,88 @@ footer {
     color: #F26A21;
   }
   
+
+
+  /* POPUP ÉXITO */
+.success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.success-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.success-content {
+    background: #fff;
+    padding: 28px 35px;
+    border-radius: 16px;
+    text-align: center;
+    width: 330px;
+    animation: popIn 0.4s ease forwards;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.success-content h3 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #F26A21;
+}
+
+.success-content p {
+    color: #555;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* ICONO ✔ ANIMADO */
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 4px solid #F26A21;
+    position: relative;
+    animation: circle 0.5s ease forwards;
+}
+
+@keyframes circle {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.success-icon::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    width: 22px;
+    height: 40px;
+    border-right: 4px solid #F26A21;
+    border-bottom: 4px solid #F26A21;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: check 0.4s ease 0.45s forwards;
+}
+
+@keyframes check {
+    0% { opacity: 0; transform: rotate(45deg) scale(0.5); }
+    100% { opacity: 1; transform: rotate(45deg) scale(1); }
+}
